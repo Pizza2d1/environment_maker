@@ -44,13 +44,8 @@ if [[ -z $uinput ]] || [[ $uinput == "y" ]] || [[ $uinput == "Y" ]]; then
     mkdir /home/$user/environment_maker_downloads
     cd /home/$user/environment_maker_downloads
     git clone https://extensions.gnome.org/extension/7406/spotify-controls/
-<<<<<<< HEAD
-    cp spotify-controls/ home/$user/.local/share/gnome-shell/extensions/spotify-controls@Sonath21/
-    echo -e "\033[0m\e[92mComplete!\033[0m"
-=======
     cp spotify-controls/ /home/$user/.local/share/gnome-shell/extensions/spotify-controls@Sonath21/
     echo "\033[0m\e[92mComplete!\033[0m"
->>>>>>> 5332551 (wrong dir location)
 fi
 
 # SYSTEM MONITOR WIDGET 
