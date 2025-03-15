@@ -1,10 +1,14 @@
 #!/bin/bash
 # This will prompt you to install all the current extensions that I have on my ubuntu laptop
 
-user=whoami # So that the downloads can be consilidated to the user rather than root
+user=$(whoami) # So that the downloads can be consilidated to the user rather than root
 
 # DESKTOP CUBE
-read -p "Do you want to download the \"Desktop Cube\" extension? [Y/n]" uinput
+if [[ $2 == "-y" ]]; then
+    uinput="y"
+else
+    read -p "Do you want to download the \"Desktop Cube\" extension? [Y/n]" uinput
+fi
 if [[ -z $uinput ]] || [[ $uinput == "y" ]] || [[ $uinput == "Y" ]]; then
     mkdir home/$user/environment_maker_downloads
     cd home/$user/environment_maker_downloads
@@ -16,7 +20,11 @@ if [[ -z $uinput ]] || [[ $uinput == "y" ]] || [[ $uinput == "Y" ]]; then
 fi
 
 # LOCK SCREEN UNBLANK
-read -p "Do you want to download the \"Unblank Lock Ccreen\" extension? [Y/n]" uinput
+if [[ $2 == "-y" ]]; then
+    uinput="y"
+else
+    read -p "Do you want to download the \"Unblank Lock Ccreen\" extension? [Y/n]" uinput
+fi
 if [[ -z $uinput ]] || [[ $uinput == "y" ]] || [[ $uinput == "Y" ]]; then
     if [[ ! -d home/$user/environment_maker_downloads ]]; then
         mkdir home/$user/environment_maker_downloads
@@ -29,7 +37,11 @@ if [[ -z $uinput ]] || [[ $uinput == "y" ]] || [[ $uinput == "Y" ]]; then
 fi
 
 # SPOTIFY
-read -p "Do you want to download the \"Spotify Widget\" extension? [Y/n]" uinput
+if [[ $2 == "-y" ]]; then
+    uinput="y"
+else
+    read -p "Do you want to download the \"Spotify Widget\" extension? [Y/n]" uinput
+fi
 if [[ -z $uinput ]] || [[ $uinput == "y" ]] || [[ $uinput == "Y" ]]; then
     if [[ ! -d home/$user/environment_maker_downloads ]]; then
         mkdir home/$user/environment_maker_downloads
@@ -41,7 +53,11 @@ if [[ -z $uinput ]] || [[ $uinput == "y" ]] || [[ $uinput == "Y" ]]; then
 fi
 
 # SYSTEM MONITOR WIDGET 
-read -p "Do you want to download the \"System Monitor Widget\" extension? [Y/n]" uinput
+if [[ $2 == "-y" ]]; then
+    uinput="y"
+else
+    read -p "Do you want to download the \"System Monitor Widget\" extension? [Y/n]" uinput
+fi
 if [[ -z $uinput ]] || [[ $uinput == "y" ]] || [[ $uinput == "Y" ]]; then
     if [[ ! -d home/$user/environment_maker_downloads ]]; then
         mkdir home/$user/environment_maker_downloads
@@ -61,7 +77,11 @@ if [[ -z $uinput ]] || [[ $uinput == "y" ]] || [[ $uinput == "Y" ]]; then
 fi
 
 # BATTERY CHARGE LIMITER 
-read -p "Do you want to download the \"Battery Charge Limitere\" extension? [Y/n]" uinput
+if [[ $2 == "-y" ]]; then
+    uinput="y"
+else
+    read -p "Do you want to download the \"Battery Charge Limitere\" extension? [Y/n]" uinput
+fi
 if [[ -z $uinput ]] || [[ $uinput == "y" ]] || [[ $uinput == "Y" ]]; then
     if [[ ! -d home/$user/environment_maker_downloads ]]; then
         mkdir home/$user/environment_maker_downloads
