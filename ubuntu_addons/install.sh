@@ -4,7 +4,7 @@
 user=$(whoami) # So that the downloads can be consilidated to the user rather than root
 
 # DESKTOP CUBE
-if [[ $2 == "-y" ]]; then
+if [[ $1 == "-y" ]]; then
     uinput="y"
 else
     read -p "Do you want to download the \"Desktop Cube\" extension? [Y/n]" uinput
@@ -20,7 +20,7 @@ if [[ -z $uinput ]] || [[ $uinput == "y" ]] || [[ $uinput == "Y" ]]; then
 fi
 
 # LOCK SCREEN UNBLANK
-if [[ $2 == "-y" ]]; then
+if [[ $1 == "-y" ]]; then
     uinput="y"
 else
     read -p "Do you want to download the \"Unblank Lock Ccreen\" extension? [Y/n]" uinput
@@ -37,7 +37,7 @@ if [[ -z $uinput ]] || [[ $uinput == "y" ]] || [[ $uinput == "Y" ]]; then
 fi
 
 # SPOTIFY
-if [[ $2 == "-y" ]]; then
+if [[ $1 == "-y" ]]; then
     uinput="y"
 else
     read -p "Do you want to download the \"Spotify Widget\" extension? [Y/n]" uinput
@@ -53,7 +53,7 @@ if [[ -z $uinput ]] || [[ $uinput == "y" ]] || [[ $uinput == "Y" ]]; then
 fi
 
 # SYSTEM MONITOR WIDGET 
-if [[ $2 == "-y" ]]; then
+if [[ $1 == "-y" ]]; then
     uinput="y"
 else
     read -p "Do you want to download the \"System Monitor Widget\" extension? [Y/n]" uinput
@@ -77,7 +77,7 @@ if [[ -z $uinput ]] || [[ $uinput == "y" ]] || [[ $uinput == "Y" ]]; then
 fi
 
 # BATTERY CHARGE LIMITER 
-if [[ $2 == "-y" ]]; then
+if [[ $1 == "-y" ]]; then
     uinput="y"
 else
     read -p "Do you want to download the \"Battery Charge Limitere\" extension? [Y/n]" uinput
